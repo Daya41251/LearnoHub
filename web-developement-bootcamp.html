@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Course Title] - E-Learning Platform</title>  <!-- Dynamic Title -->
+    <style>
+        /* Reuse Styles from index.html - Minimal Changes Here */
+        :root {
+            --primary-color: #3498db; /* A nice blue */
+            --secondary-color: #e74c3c; /* A complementary red */
+            --text-color: #333;
+            --background-color: #f9f9f9;
+            --light-gray: #eee;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+
+        nav {
+            background-color: var(--light-gray);
+            padding: 10px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            border-radius: 8px;
+        }
+
+        .course-overview {
+            margin-bottom: 30px;
+        }
+
+        .course-overview img {
+            width: 100%;
+            max-height: 400px; /* Limit image height */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .course-content h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .course-content h3 {
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .course-content p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .course-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .course-content li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px; /* Add some space above the footer */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>E-Learning Platform</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>  <!-- Link back to the main page -->
+        <a href="#">Other Courses</a> <!-- Add more links as needed -->
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <section class="course-overview">
+            <h2>[Course Title]</h2>  <!-- Dynamic Course Title -->
+            <img src="[Course Image URL]" alt="[Course Title]"> <!-- Dynamic Image -->
+            <p>[Brief Course Description]</p> <!-- Dynamic Description -->
+        </section>
+
+        <section class="course-content">
+            <h2>Course Content</h2>
+
+            <h3>Module 1: [Module 1 Title]</h3>
+            <p>[Module 1 Description]</p>
+            <ul>
+                <li>[Lesson 1]</li>
+                <li>[Lesson 2]</li>
+                <li>[Lesson 3]</li>
+            </ul>
+
+            <h3>Module 2: [Module 2 Title]</h3>
+            <p>[Module 2 Description]</p>
+            <ul>
+                <li>[Lesson 1]</li>
+                <li>[Lesson 2]</li>
+            </ul>
+
+            <!-- Add more modules as needed -->
+        </section>
+
+        <section class="instructor-info">
+            <h2>About the Instructor</h2>
+            <img src="[Instructor Image URL]" alt="[Instructor Name]" style="width: 100px; border-radius: 50%;">
+            <h3>[Instructor Name]</h3>
+            <p>[Instructor Bio]</p>
+        </section>
+    </main>
+
+    <footer>
+        © 2024 E-Learning Platform. All rights reserved.
+    </footer>
+
+</body>
+</html>

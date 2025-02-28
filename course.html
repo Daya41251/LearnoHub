@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Bootcamp</title>
+    <style>
+        /* CSS */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Prevent body scroll */
+        }
+
+        .container {
+            display: flex;
+            height: 100vh; /* Full viewport height */
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            box-sizing: border-box;
+            overflow-y: scroll; /* Vertical scroll for sidebar */
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            color: #eee;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            padding: 10px 0;
+            border-bottom: 1px solid #555;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            background-color: white;
+            box-sizing: border-box;
+            overflow-y: scroll; /* Vertical scroll for content */
+            padding: 20px;
+        }
+
+        .content h1, .content h2 {
+            margin-top: 0;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Optional: style the scrollbar */
+        /* This is just an example - you can customize it */
+        .sidebar::-webkit-scrollbar, .content::-webkit-scrollbar {
+            width: 10px; /* make it a little wider */
+        }
+
+        .sidebar::-webkit-scrollbar-thumb, .content::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+            border-radius: 5px;
+        }
+
+        .sidebar::-webkit-scrollbar-track, .content::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0.05); /* Light grey */
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                overflow-y: scroll;  /* changed back to scroll here */
+            }
+            .content {
+                overflow-y: scroll;  /* and here */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>Course Outline</h2>
+            <ul id="outline-list">
+                <!-- Sidebar links will be dynamically added here by JavaScript -->
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>Full-Stack Web Development Bootcamp</h1>
+            <section id="introduction">
+                <h2>Module 1: Introduction to Web Development and the Internet</h2>
+                <p>This module covers the fundamentals of the internet, front-end vs back-end development, setting up your environment, and basic command-line usage.</p>
+                <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="html">
+                <h2>Module 2: HTML - Structuring Web Content</h2>
+                <p>Learn how to structure web content using HTML tags, including text, images, links, lists, and tables.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="css">
+                <h2>Module 3: CSS - Styling Web Content</h2>
+                <p>Master CSS to style your web pages, controlling layout, typography, colors, and visual aspects.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="javascript">
+                <h2>Module 4: JavaScript - Adding Interactivity</h2>
+                <p>Add interactivity to your websites using JavaScript, manipulating the DOM and handling events.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="frontend-framework">
+                <h2>Module 5: Introduction to Front-End Frameworks</h2>
+                <p>Get introduced to a front-end framework like React, Angular, or Vue.js for building complex UIs.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="backend-nodejs">
+                <h2>Module 6: Back-End Development with Node.js and Express</h2>
+                <p>Learn server-side programming with Node.js and Express to create web servers and APIs.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="databases">
+                <h2>Module 7: Databases</h2>
+                <p>Understand database concepts and learn to use a NoSQL (MongoDB) or relational (PostgreSQL) database.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="deployment">
+                <h2>Module 8: Deployment</h2>
+                <p>Learn how to deploy your full-stack application to a cloud platform.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="advanced-topics">
+                <h2>Module 9: Advanced Topics</h2>
+                <p>Explore advanced topics in web development, such as testing, state management, or web sockets.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+
+            <section id="final-project">
+                <h2>Module 10: Final Project and Portfolio Building</h2>
+                <p>Apply your skills to build a final project and create a professional portfolio.</p>
+                 <p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p><p>Add more content here</p>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        // JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const outlineList = document.getElementById('outline-list');
+            const contentSections = document.querySelectorAll('.content section');
+
+            const courseOutline = [
+                { id: 'introduction', title: 'Introduction to Web Development and the Internet' },
+                { id: 'html', title: 'HTML - Structuring Web Content' },
+                { id: 'css', title: 'CSS - Styling Web Content' },
+                { id: 'javascript', title: 'JavaScript - Adding Interactivity' },
+                { id: 'frontend-framework', title: 'Introduction to Front-End Frameworks' },
+                { id: 'backend-nodejs', title: 'Back-End Development with Node.js and Express' },
+                { id: 'databases', title: 'Databases' },
+                { id: 'deployment', title: 'Deployment' },
+                { id: 'advanced-topics', title: 'Advanced Topics' },
+                { id: 'final-project', title: 'Final Project and Portfolio Building' }
+            ];
+
+            function generateSidebarLinks() {
+                courseOutline.forEach(module => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = '#' + module.id;
+                    link.textContent = module.title;
+                    listItem.appendChild(link);
+                    outlineList.appendChild(listItem);
+                });
+            }
+
+            function handleScroll() {
+                let currentSection = null;
+
+                contentSections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                        currentSection = section.id;
+                    }
+                });
+
+                document.querySelectorAll('.sidebar a').forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                if (currentSection) {
+                    const activeLink = document.querySelector(`.sidebar a[href="#${currentSection}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+
+            generateSidebarLinks();
+            handleScroll();
+
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+</body>
+</html>
