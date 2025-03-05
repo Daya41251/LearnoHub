@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Awesome Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Enhanced UI Styles */
+    :root {
+      --primary-color: #007bff;  /* Example: Bootstrap primary color */
+      --secondary-color: #6c757d; /* Example: Bootstrap secondary color */
+      --light-gray: #f8f9fa;       /* Light background */
+      --dark-gray: #343a40;       /* Dark text/elements */
+      --accent-color: #ffc107;    /* A yellow/gold accent */
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      line-height: 1.7;
+      background-color: var(--light-gray); /* Lighter background */
+      color: var(--dark-gray);
+    }
+
+    .container {
+      width: 85%;  /* Slightly wider container */
+      margin: auto;
+      overflow: hidden;
+      padding: 20px; /* More padding */
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;  /* Smooth color transition */
+    }
+
+    a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px; /* Rounded corners for images */
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      color: var(--dark-gray);
+      padding: 1.5rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;  /* Slightly larger title */
+      font-weight: 600;
+    }
+
+    header nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex; /* Use flexbox for the navigation */
+    }
+
+    header nav li {
+      margin-left: 25px;
+    }
+
+    header nav a {
+      color: var(--dark-gray);
+      font-weight: 500;
+      padding: 0.5rem 0;
+      display: block;
+    }
+
+    header nav a:hover {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    /* Blog Post Styles */
+    .blog-post {
+      background: #fff;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 12px; /* More rounded corners */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Stronger shadow */
+      transition: transform 0.2s ease; /* Hover effect */
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-post h2 {
+      margin-top: 0;
+      font-size: 1.8rem; /* Larger heading */
+      color: var(--dark-gray);
+    }
+
+    .blog-post h2 a {
+      color: inherit; /* Inherit the dark-gray color */
+    }
+
+    .post-meta {
+      color: var(--secondary-color);
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .read-more {
+      display: inline-block;
+      background: var(--primary-color);
+      color: #fff;
+      padding: 12px 25px; /* Larger button */
+      border-radius: 8px;
+      margin-top: 15px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more:hover {
+      background: var(--accent-color);
+      color: var(--dark-gray);
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-gray);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+
+      header .container {
+        flex-direction: column;  /* Stack header elements */
+        align-items: center;
+      }
+
+      header h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      header nav {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      header nav ul {
+        display: none;
+        flex-direction: column; /* Stack navigation items */
+      }
+
+      header nav li {
+        margin: 10px 0;
+      }
+
+      header .menu-toggle {
+        display: block;
+        background: var(--primary-color);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px auto;
+      }
+
+      header nav ul.mobile-menu {
+        display: flex;
+      }
+    }
+
+    header .menu-toggle {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1><a href="/Blog.html">My Blog</a></h1>  <!-- Link to the homepage -->
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>  <!--Link to homepage-->
+          <li><a href="/about.html">About</a></li> <!--Link to about page-->
+          <li><a href="/Blog.html">Blog</a></li>  <!--Link to the Blog page-->
+          <li><a href="/contact.html">Contact</a></li>  <!--Link to contact page-->
+        </ul>
+        <button class="menu-toggle">☰ Menu</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="blog-post">
+        <h2><a href="/post1.html">First Blog Post Title</a></h2>  <!-- Link to the full post -->
+        <p class="post-meta">Published on January 1, 2024 by John Doe</p>
+        <img src="placeholder-image.jpg" alt="Placeholder Image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisi vel iaculis semper, magna erat facilisis erat, vitae finibus odio metus vel odio. Sed nec velit ut lacus ultricies vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent nec arcu eu dolor fermentum auctor. Morbi dictum, risus at interdum commodo, libero nisi pulvinar nisi, sed tempus urna augue at tortor. Donec vitae congue arcu.</p>
+        <a href="/post1.html" class="read-more">Read More</a>  <!-- Link to the full post -->
+      </article>
+
+      <article class="blog-post">
+        <h2><a href="/post2.html">Second Blog Post Title</a></h2>  <!-- Link to the full post -->
+        <p class="post-meta">Published on January 5, 2024 by Jane Smith</p>
+        <img src="placeholder-image.jpg" alt="Placeholder Image">
+        <p>Another blog post excerpt... This is just some example text to fill the space. You'll replace this with the actual content of your blog posts.</p>
+        <a href="/post2.html" class="read-more">Read More</a>  <!-- Link to the full post -->
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 My Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('mobile-menu');
+    });
+  </script>
+
+</body>
+</html>
